@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Button} from 'element-react';
+import 'element-theme-default';
 
 class App extends Component {
   render() {
@@ -13,6 +15,7 @@ class App extends Component {
         <p className="App-intro">
           Hello react!!!
         </p>
+      <Button type="primary" >Hello</Button>
       </div>
     );
   }
