@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+
 import {Button} from 'element-react';
 import 'element-theme-default';
 
 class App extends Component {
+    constructor(props){
+        super(props);
+        this.onClick = this.onClick.bind(this);
+    }
+  onClick(){
+      alert('click');
+  }
   render() {
     return (
       <div className="App">
@@ -15,7 +23,7 @@ class App extends Component {
         <p className="App-intro">
           Hello react!!!
         </p>
-      <Button type="primary" >Hello</Button>
+          <Button type="primary" onClick={this.onClick}>Hello</Button>
       </div>
     );
   }
