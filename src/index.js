@@ -16,7 +16,7 @@ const NoMatch = ({ location }) => (
 );
 
 ReactDOM.render(<BrowserRouter basename="/">
-		<div>
+		<div style={{width:"1200px",margin:"auto"}}>
 			<HeadMenu />
 			<Switch>
 				<Route exact path="/" component={App}/> 

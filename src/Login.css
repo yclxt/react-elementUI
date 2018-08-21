@@ -1,5 +1,6 @@
 .Login{
     text-align: center;
+	height: 400px;
    /* width:1200px;
     height: 1000px;
     margin:auto;*/
@@ -8,5 +9,6 @@
 .form{
   	width: 300px;
   	margin: auto;
-  	margin-top:10%;
+	padding-top: 50px;
+	background-color: #fbfdff;
 }
