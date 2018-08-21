@@ -29,7 +29,7 @@ class HeadMenu extends Component{
  }
 
   onClick(){
-    // this.props.context.push("/login");
+    window.location.href = "/login";
   }
 
  noLoginRender(){
