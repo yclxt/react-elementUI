@@ -1,8 +1,12 @@
 .Login{
     text-align: center;
+   /* width:1200px;
+    height: 1000px;
+    margin:auto;*/
 }
 
 .form{
-      width: 300px;
-    margin: auto;
-  }
+  	width: 300px;
+  	margin: auto;
+  	margin-top:10%;
+}
