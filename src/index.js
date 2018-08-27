@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import HeadMenu from './common/component/HeadMenu.js';
-import App from './App';
-import {Login} from './Login';
+import Home from './Home/Home.js';
+import {Login} from './Login/Login';
 import registerServiceWorker from './registerServiceWorker';
 import {BrowserRouter, Route,Switch} from 'react-router-dom';
 
@@ -15,11 +14,12 @@ const NoMatch = ({ location }) => (
   </div>
 );
 
+
+
 ReactDOM.render(<BrowserRouter basename="/">
 		<div style={{width:"1200px",margin:"auto"}}>
-			<HeadMenu />
 			<Switch>
-				<Route exact path="/" component={App}/> 
+				<Route exact path="/" component={Home}/> 
 				<Route path="/login" component={Login}/>  
 				<Route component={NoMatch} />
 			</Switch>		
