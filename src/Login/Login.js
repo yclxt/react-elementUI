@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+﻿import React, { Component } from 'react';
 import './css/Login.css';
 import {Button,Form,Input,Message} from 'element-react';
 import 'element-theme-default';
@@ -21,11 +21,11 @@ class Login extends Component{
     }
 
     onFormChange(k,v){
-        console.log(k + v);
+       
         this.state.form[k] = v;
         this.forceUpdate();
 
-        console.log(this.state.form[k]);
+        
     }
 
     isNull(string){
