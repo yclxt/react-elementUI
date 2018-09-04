@@ -39,27 +39,46 @@ class Login extends Component{
     submit(){
         var username = this.state.form.username;
         var password = this.state.form.password;
-        
-        if(this.isNull(username) || this.isNull(password)){
-            Message({
-                showClose: true,
-                message: '用户名或密码不能为空！',
-                type: 'error'
-              });
-        }else{
-            //做一个请求，这里写死做测试
-            if(username == "tom" && password == "123"){
-                //做一个跳转
-                window.location.href = '/';
-            }else{
-                //添加一个Dialog，点击确定返回登录页面并请客输入信息
-                Message({
-                    showClose: true,
-                    message: '用户名或密码错误，请重新输入！',
-                    type: 'error'
-                  });
-                //清除填写的信息
-            }
+        this.ajaxGet();
+        // if(this.isNull(username) || this.isNull(password)){
+        //     Message({
+        //         showClose: true,
+        //         message: '用户名或密码不能为空！',
+        //         type: 'error'
+        //       });
+        // }else{
+        //     //做一个请求，这里写死做测试
+        //     if(username == "tom" && password == "123"){
+        //         Message({
+        //             showClose: true,
+        //             message: '登录成功！',
+        //             type: 'success'
+        //         });
+        //
+        //         this.ajaxGet();
+        //     }else{
+        //         //添加一个Dialog，点击确定返回登录页面并请客输入信息
+        //         Message({
+        //             showClose: true,
+        //             message: '用户名或密码错误，请重新输入！',
+        //             type: 'error'
+        //           });
+        //         //清除填写的信息
+        //     }
+        // }
+    }
+
+    ajaxGet(){
+        var xmlhttp = new XMLHttpRequest();
+
+        xmlhttp.open("GET","http://localhost:8080/user/all",true);
+        xmlhttp.send();
+
+        xmlhttp.onreadystatechange  = function(){
+
+            var res = xmlhttp.response;
+
+            console.log("=======response" + res);
         }
     }
 
